@@ -3,7 +3,7 @@ let socket;
 
 socket = remote_server ? net.connect(8000, remote_server) : net.connect(8000);
 
-let ostream = fs.createWriteStream("./reciever/SC-02.pdf");
+let ostream = fs.createWriteStream("./receiver/SC-02.pdf");
 let date = new Date(), size = 0, elapsed;
 socket.on('data', chunk => {
   size += chunk.length;
