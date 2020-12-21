@@ -10,7 +10,7 @@ socket.on('data', chunk => {
   elapsed = new Date() - date;
   socket.write(`\r${(size / (1024 * 1024)).toFixed(2)} MB of data was sent. Total elapsed time is ${elapsed / 1000} s`)
   process.stdout.write(`\r${(size / (1024 * 1024)).toFixed(2)} MB of data was sent. Total elapsed time is ${elapsed / 1000} s`);
-  ostream.write(chunk);https://medium.com/@i_ambenkay/how-to-create-your-very-own-file-transfer-program-in-node-js-f57edef302c2
+  ostream.write(chunk);
 });
 socket.on("end", () => {
   console.log(`\nFinished getting file. speed was: ${((size / (1024 * 1024)) / (elapsed / 1000)).toFixed(2)} MB/s`);
